@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3001;
 
 //サーバーの立ち上げ
 var http = require('http');
@@ -36,6 +36,11 @@ wss.on('connection', function (ws) {
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
+});
+
+app.get('/callback', function(req, res){
+  console.log(res.query);
+  res.send(200);
 });
 
 //サーバーと接続されると呼ばれる
