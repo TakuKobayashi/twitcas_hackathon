@@ -47,6 +47,7 @@ app.get('/twitcas_callback', function(req, res){
   console.log(req.query);
   twitcas_request.get_access_token(req.query.code, function(body){
     console.log(body);
+    res.redirect("/");
   });
 });
 
