@@ -1,0 +1,31 @@
+{
+  "name": "twitcas_hackathon",
+  "version": "0.0.0",
+  "description": "twitcas_hackathon",
+  "main": "index.js",
+  "author": "taku",
+  "private": true,
+  "license": "",
+  "dependencies": {
+    "socket.io": "*",
+    "websocket.io": "*",
+    "mysql": "*",
+    "ejs": "*",
+    "express": "*",
+    "request": "*",
+    "sequelize": "*",
+    "db-migrate": "*",
+    "emoji-strip": "*",
+    "sync-request":"*",
+    "twitter": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TakuKobayashi/twitcas_hackathon"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "license": "MIT"
+}
