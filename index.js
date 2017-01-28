@@ -39,8 +39,8 @@ app.get('/', function(req, res){
 });
 
 app.get('/callback', function(req, res){
-  console.log(res.query);
-  res.send(200);
+  console.log(req.query);
+  res.sendStatus(200);
 });
 
 //サーバーと接続されると呼ばれる
