@@ -10,7 +10,7 @@ exports.get_oauth_url = function() {
   return twitcas_host + "/oauth2/authorize?client_id=" + apiConfig.twitcas.client_id + "&response_type=code"
 };
 
-exports.get_access_token = function(code, redirect_url, callback) {
+exports.get_access_token = function(code, callback) {
   //ヘッダーを定義
   var headers = {
     'Content-Type':'application/json;charset=UTF-8'
@@ -20,7 +20,7 @@ exports.get_access_token = function(code, redirect_url, callback) {
     "client_id":apiConfig.twitcas.client_id,
     "client_secret":apiConfig.twitcas.client_secret,
     "grant_type":"authorization_code",
-    "redirect_uri":redirect_url,
+    "redirect_uri":"http://taptappun.cloudapp.net:3001/twitcas_callback",
   }
   var request_parms = {
     url: twitcas_host + "/oauth2/access_token",

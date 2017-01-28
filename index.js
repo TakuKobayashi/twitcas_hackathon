@@ -45,7 +45,7 @@ app.get('/twitcas_oauth', function(req, res){
 
 app.get('/twitcas_callback', function(req, res){
   console.log(req.query);
-  twitcas_request.get_access_token(req.query.code, "http://taptappun.cloudapp.net:3001/", function(body){
+  twitcas_request.get_access_token(req.query.code, function(body){
     console.log(body);
   });
 });
