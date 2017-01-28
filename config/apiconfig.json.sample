@@ -6,5 +6,7 @@
     "access_token_secret":""
   },
   "twitcas": {
+    "client_id":"",
+    "client_secret":""
   }
 }
