@@ -38,9 +38,16 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/callback', function(req, res){
+var twitcas_request = require('./twicas_api_request.js');
+app.get('/twitcas_oauth', function(req, res){
+  res.redirect(twitcas_request.get_oauth_url());
+});
+
+app.get('/twitcas_callback', function(req, res){
   console.log(req.query);
-  res.sendStatus(200);
+  twitcas_request.get_access_token(req.query.code, "http://taptappun.cloudapp.net:3001/", function(body){
+    console.log(body);
+  });
 });
 
 //サーバーと接続されると呼ばれる
